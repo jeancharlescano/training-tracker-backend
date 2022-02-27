@@ -8,7 +8,7 @@ export const createExercice = async (req, _res) => {
     let result = null;
     await pool
         .query (
-            "INSERT INTO exercices (libelle, description,image VALUES ($1, $2, $3;",
+            "INSERT INTO exercices (libelle, description,image) VALUES ($1, $2, $3);",
             [libelle, description, image]
         ) 
         .then ((_response) => {
